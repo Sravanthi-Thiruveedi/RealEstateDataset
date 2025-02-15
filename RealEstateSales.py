@@ -13,7 +13,7 @@ import plotly.graph_objects as go
 # response = requests.get("https://example.com", verify=False)
 # print(response.text)
 # Load the data
-data = pd.read_csv(r'/users/sravanthithiruveedi/DTSA 5304/Github clone/RealEstateDataset/RealEstateSales.csv')
+data = pd.read_csv('RealEstateSales.csv')
 #data.head()
 #data.info()
 # Data Cleaning
@@ -21,7 +21,7 @@ data_cleaned = data.drop(data[data['Town'] == '***Unknown***'].index)
 data_cleaned['Town'].unique()
 css = ["https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css", ]
 app = Dash(name="RealEstateSales Dashboard", external_stylesheets=css)
-#server = app.server
+server = app.server
 #Create a table to show the sample data
 def create_table():
     top_40_data = data_cleaned[['Serial Number','List Year','Date Recorded','Town', 'Address', 'Assessed Value','Sale Amount',
