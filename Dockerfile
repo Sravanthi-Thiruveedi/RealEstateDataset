@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 8050
 
 # Command to run the app
-CMD ["python", "app.py"]
+CMD ["python", "DTSA5304FinalAssignment.ipynb"]
